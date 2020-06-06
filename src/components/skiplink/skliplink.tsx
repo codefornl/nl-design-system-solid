@@ -1,12 +1,12 @@
 import './skiplink.scss';
 
 interface Properties {
+    id: string;
     title: string;
-    href?: string;
 }
 
 export const SkipLink = (properties: Properties) => (
     <>
-        <a class="skiplink" href={properties.href ? properties.href : "#main-content"}>{properties.title}</a>
+        <a class="skiplink" href={`#${properties.id}`}>{properties.title}</a>
     </>
 );

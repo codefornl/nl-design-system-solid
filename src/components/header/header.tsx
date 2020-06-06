@@ -1,12 +1,13 @@
 import './header.scss';
 
 export interface HeaderProperties {
-    title: string;
-    screenreader: string;
+    title?: string;
+    screenreader?: string;
     link?: string;
     transparent?: boolean;
     logo?: 'ocw' | 'cte';
     white?: boolean;
+    hide?: boolean;
 }
 
 /**
@@ -17,14 +18,14 @@ export interface HeaderProperties {
 export const Header = (properties: HeaderProperties) => (
     <>
         <header class={`header${properties.transparent ? " header--transparent" : ""}`} role="banner">
-            <div class={`header-logo
+            {properties.hide ? "" : <div class={`header-logo
                 ${properties.logo ? " header-logo--" + properties.logo : ""}
-                ${properties.white ? " header-logo--white": ""}
+                ${properties.white ? " header-logo--white" : ""}
             `}>
                 <a href={properties.link ? properties.link : "/"} title={properties.title}>
-                    <span class="screenreader-only">{ properties.screenreader}</span>
+                    <span class="screenreader-only">{properties.screenreader}</span>
                 </a>
-            </div>
+            </div>}
         </header>
     </>
 );

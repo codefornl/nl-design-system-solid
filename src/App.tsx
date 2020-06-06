@@ -1,60 +1,36 @@
-import { Label } from './components/label/label';
-import { Counter } from './components/Counter';
-import { Button } from './components/button/button'
-import { Card } from './components/card/card';
-import { BottomBar } from './components/bottom-bar/bottom-bar';
 import { Header, HeaderProperties } from './components/header/header';
-import { Navigation } from './components/navigation/navigation';
-import { Backlink } from './components/navigation/backlink';
-import { Badge } from './components/label/badge';
 import { SkipLink } from './components/skiplink/skliplink';
+import { Notification } from './components/notification/notification';
 
 function App() {
 
-  const cte: HeaderProperties = {
-    logo: "cte",
-    title: "College voor Toetsen en Examens",
-    screenreader: "college voor toetsen en examens, naar de homepage"
-  }
-
-  const ocw: HeaderProperties = {
-    logo: "ocw",
-    title: "Logo Ministerie van Onderwijs, Cultuur en Wetenschap",
-    screenreader: "ministerie van onderwijs, cultuur en wetenschap, naar de homepage"
-  }
-
-  const duo: HeaderProperties = {
-    title: "Logo Dienst Uitvoering Onderwijs",
-    screenreader: "dienst uitvoering onderwijs, naar de homepage"
-  }
-
   return (
     <>
-    <SkipLink title="Ga direct naar inhoud" href="#main-content"/>
-      <Header white={ true } { ...duo }/>
-      <Navigation block={ true }/>
+      <SkipLink id="content" title="Ga direct naar inhoud" />
+      <Header hide={true} transparent={true} />
       <main class="skiplink-target main" id="content" tabindex="-1">
         <div class="container">
-          <Card title="Lorum ipsum" image="https://nl-design-system.gitlab.io/nl-design-system/images/img-1.png" />
-          <Button title="Default"></Button>
-          <Button title="Primary" primary={ true }></Button>
-          <Button title="Default disabled" disabled={ true }></Button>
-          <Button title="Primary disabled" primary={ true } disabled={ true }></Button>
-          <Counter></Counter>
-          <Badge color="rood" icon="user" value={ 1 }/>
-          <Label title="Hemelblauw" color="hemelblauw" />
-          <Backlink content="Leerlingenadministratie" title="Naar Leerlingenadministratie"/>
+          <section class="row">
+            <div class="col-xs-12 col-sm-11 col-md-10 col-lg-9 col-xl-8">
+              <div class="content">
+                <header class="content__header">
+                  <h1 class="content__header-title">NL Design System</h1>
+                </header>
+              </div>
+            </div>
+          </section>
+          <article>
+            <div class="row">
+              <div class="col-sm-12">
+                <Notification 
+                  type="warning" 
+                  title="NL Design System in pilotfase"
+                  description={`Het NL Design System bevindt zich momenteel nog in de pilotfase. Hierdoor is het nu nog niet volwassen genoeg om volledig gebruikt te worden. Houdt hier dus rekening mee voor je aan de slag gaat. We zouden het op prijs stellen als je wilt bijdragen om het NLDS tot een succes te maken. Dit kan in onze gitlab of met een mailtje aan: NLDesignSystem@gebruikercentraal.nl`}/>
+              </div>
+            </div>
+          </article>
         </div>
       </main>
-      <BottomBar>
-        <div class="container">
-          <div class="row">
-            <div class="col-xl-9 col-lg-10 col-lg-offset-1">
-              <p>De bottom bar kan in principe alles bevatten. Dus ook een <Button title="Knop" /></p>
-            </div>
-          </div>
-        </div>
-      </BottomBar>
     </>
   );
 }
