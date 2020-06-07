@@ -1,5 +1,7 @@
 This project was bootstrapped with [Create Solid](https://github.com/ryansolid/create-solid).
 
+This project aims to be a reference implementation for https://nl-design-system.gitlab.io/nl-design-system/
+
 ## Available Scripts
 
 In the project directory, you can run:

@@ -1,7 +1,6 @@
 import { Header } from './components/header/header';
 import { SkipLink } from './components/skiplink/skliplink';
 import { Notification } from './components/notification/notification';
-import { Show, createState } from 'solid-js';
 
 function App() {
 
