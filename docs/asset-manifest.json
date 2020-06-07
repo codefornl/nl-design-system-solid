@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "https://www.codefor.nl/nl-design-system-solid/docs/static/css/main.f04dccbe.chunk.css",
-    "main.js": "https://www.codefor.nl/nl-design-system-solid/docs/static/js/main.771cb6d2.chunk.js",
-    "runtime~main.js": "https://www.codefor.nl/nl-design-system-solid/docs/static/js/runtime~main.54953003.js",
-    "static/js/2.f66ed24c.chunk.js": "https://www.codefor.nl/nl-design-system-solid/docs/static/js/2.f66ed24c.chunk.js",
-    "index.html": "https://www.codefor.nl/nl-design-system-solid/docs/index.html",
-    "precache-manifest.c073d5eaec2d3ed7a8db4e5dc735a184.js": "https://www.codefor.nl/nl-design-system-solid/docs/precache-manifest.c073d5eaec2d3ed7a8db4e5dc735a184.js",
-    "service-worker.js": "https://www.codefor.nl/nl-design-system-solid/docs/service-worker.js",
-    "static/media/base.scss": "https://www.codefor.nl/nl-design-system-solid/docs/static/media/duo-basic.ec82c48d.ttf",
-    "static/media/header.scss": "https://www.codefor.nl/nl-design-system-solid/docs/static/media/ocw-text-s.ceed3878.svg"
+    "main.css": "https://www.codefor.nl/nl-design-system-solid/static/css/main.a36b3be9.chunk.css",
+    "main.js": "https://www.codefor.nl/nl-design-system-solid/static/js/main.f9a9aabd.chunk.js",
+    "runtime~main.js": "https://www.codefor.nl/nl-design-system-solid/static/js/runtime~main.e65425c1.js",
+    "static/js/2.f66ed24c.chunk.js": "https://www.codefor.nl/nl-design-system-solid/static/js/2.f66ed24c.chunk.js",
+    "index.html": "https://www.codefor.nl/nl-design-system-solid/index.html",
+    "precache-manifest.2b11652dcd5b4dcb5fc02df9c386a0f4.js": "https://www.codefor.nl/nl-design-system-solid/precache-manifest.2b11652dcd5b4dcb5fc02df9c386a0f4.js",
+    "service-worker.js": "https://www.codefor.nl/nl-design-system-solid/service-worker.js",
+    "static/media/base.scss": "https://www.codefor.nl/nl-design-system-solid/static/media/duo-basic.ec82c48d.ttf",
+    "static/media/header.scss": "https://www.codefor.nl/nl-design-system-solid/static/media/ocw-text-s.ceed3878.svg"
   }
 }

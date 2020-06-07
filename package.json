@@ -12,7 +12,7 @@
   },
   "scripts": {
     "start": "solid-scripts start",
-    "build": "export PUBLIC_URL=https://www.codefor.nl/nl-design-system-solid/docs/ && solid-scripts build",
+    "build": "export PUBLIC_URL=https://www.codefor.nl/nl-design-system-solid/ && solid-scripts build",
     "test": "solid-scripts test",
     "check-types": "tsc"
   },
