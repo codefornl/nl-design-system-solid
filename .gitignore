@@ -7,8 +7,6 @@
 /npm-debug.log
 /screenshots
 /coverage
-/docs/*
-!/docs/.gititkeep
 /node_modules*
 /typings
 /backstop_data/bitmaps_test
