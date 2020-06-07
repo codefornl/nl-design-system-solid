@@ -15,7 +15,7 @@ export const Button = (properties: Properties) => {
     return (
         <button class={`btn${properties.primary ? " btn--primary" : ""}`}
             disabled={properties.disabled}
-            onclick={click}>
+            onClick={click}>
                 {properties.title}
         </button>
     )

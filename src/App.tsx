@@ -3,6 +3,7 @@ import { SkipLink } from './components/skiplink/skliplink';
 import { Notification } from './components/notification/notification';
 import { CardList } from './components/list/list-card';
 import { CardProperties } from './components/card/card';
+import { Footer } from './components/footer/footer';
 
 function App() {
 
@@ -62,27 +63,48 @@ function App() {
           <article>
             <div class="row">
               <div class="col-sm-12">
-                  <Notification 
-                    type="warning" 
-                    title="NL Design System in pilotfase"
-                    description={`Het NL Design System bevindt 
+                <Notification
+                  type="warning"
+                  title="NL Design System in pilotfase"
+                  description={`Het NL Design System bevindt 
                     zich momenteel nog in de pilotfase. 
                     Hierdoor is het nu nog niet volwassen genoeg om volledig gebruikt 
                     te worden. Houdt hier dus rekening mee voor je aan de slag gaat. We 
                     zouden het op prijs stellen als je wilt bijdragen om het NLDS tot een 
                     succes te maken. Dit kan in onze gitlab of met een 
-                    mailtje aan: NLDesignSystem@gebruikercentraal.nl`}/>
-                  <CardList cards={cards}/>
+                    mailtje aan: NLDesignSystem@gebruikercentraal.nl`} />
+                <CardList cards={cards} />
               </div>
             </div>
             <div class="row">
               <div class="col-sm-12">
-                  <CardList cards={sampleCards}/>
+                <CardList cards={sampleCards} />
               </div>
             </div>
           </article>
         </div>
       </main>
+      <Footer>
+        <div class="col-xs-4">
+          <span class="footer__header">NL Design System 0.1.2-Solid</span>
+
+          <ul class="list list--links footer__nav">
+            <li><a href="upgrade/index.html">Upgraden</a></li>
+          </ul>
+        </div>
+        <div class="col-xs-4">
+          <span class="footer__header">Bijdragen</span>
+          <ul class="list list--links footer__nav">
+            <li><a rel="external" href="https://gitlab.com/nl-design-system/nl-design-system">GitLab</a></li>
+          </ul>
+        </div>
+        <div class="col-xs-4">
+          <span class="footer__header">Contact</span>
+          <ul class="list list--links footer__nav">
+            <li><a href="">Stuur een e-mail</a></li>
+          </ul>
+        </div>
+      </Footer>
     </>
   );
 }
