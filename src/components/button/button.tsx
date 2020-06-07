@@ -4,10 +4,19 @@ interface Properties {
     title: string;
     disabled?: boolean;
     primary?: boolean;
+    onClick: () => void;
 }
 
-export const Button = (properties: Properties) => (
-    <>
-        <button class={`btn${properties.primary ? " btn--primary" : ""}`}  disabled={properties.disabled}>{properties.title}</button>
-    </>
-);
+export const Button = (properties: Properties) => {
+    const click = () => {
+        if (properties.onClick) properties.onClick()
+    }
+
+    return (
+        <button class={`btn${properties.primary ? " btn--primary" : ""}`}
+            disabled={properties.disabled}
+            onclick={click}>
+                {properties.title}
+        </button>
+    )
+};

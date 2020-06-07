@@ -5,9 +5,7 @@ interface Properties {
 }
 
 export const BottomBar = (properties: Properties) => (
-    <>
-        <div class="bottom-bar">
-            { properties.children }
-        </div>
-    </>
+    <div class="bottom-bar">
+        { properties.children }
+    </div>
 );
