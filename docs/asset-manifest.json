@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/static/css/main.f378eb40.chunk.css",
-    "main.js": "/static/js/main.ca16caa7.chunk.js",
-    "runtime~main.js": "/static/js/runtime~main.8152c903.js",
-    "static/js/2.f66ed24c.chunk.js": "/static/js/2.f66ed24c.chunk.js",
-    "index.html": "/index.html",
-    "precache-manifest.23bf6a934bfbda7edaca3524f917d1ca.js": "/precache-manifest.23bf6a934bfbda7edaca3524f917d1ca.js",
-    "service-worker.js": "/service-worker.js",
-    "static/media/base.scss": "/static/media/duo-basic.ec82c48d.ttf",
-    "static/media/header.scss": "/static/media/ocw-text-s.ceed3878.svg"
+    "main.css": "https://www.codefor.nl/nl-design-system-solid/docs/static/css/main.f04dccbe.chunk.css",
+    "main.js": "https://www.codefor.nl/nl-design-system-solid/docs/static/js/main.771cb6d2.chunk.js",
+    "runtime~main.js": "https://www.codefor.nl/nl-design-system-solid/docs/static/js/runtime~main.54953003.js",
+    "static/js/2.f66ed24c.chunk.js": "https://www.codefor.nl/nl-design-system-solid/docs/static/js/2.f66ed24c.chunk.js",
+    "index.html": "https://www.codefor.nl/nl-design-system-solid/docs/index.html",
+    "precache-manifest.c073d5eaec2d3ed7a8db4e5dc735a184.js": "https://www.codefor.nl/nl-design-system-solid/docs/precache-manifest.c073d5eaec2d3ed7a8db4e5dc735a184.js",
+    "service-worker.js": "https://www.codefor.nl/nl-design-system-solid/docs/service-worker.js",
+    "static/media/base.scss": "https://www.codefor.nl/nl-design-system-solid/docs/static/media/duo-basic.ec82c48d.ttf",
+    "static/media/header.scss": "https://www.codefor.nl/nl-design-system-solid/docs/static/media/ocw-text-s.ceed3878.svg"
   }
 }
