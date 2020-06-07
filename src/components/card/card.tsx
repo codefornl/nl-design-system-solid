@@ -5,11 +5,12 @@ export interface CardProperties {
     title: string;
     image: string;
     content?: string;
+    href?: string;
 }
 
 export const Card = (properties: CardProperties) => (
     <li class="card">
-        <a href="#" class="card__content">
+        <a href={`${properties.href ? properties.href : "#"}`} class="card__content">
             <div class="card__thumb" style={`background-image: url('${properties.image}')`}></div>
             <div class="card__body">
                 <span class="card__title">{properties.title}</span>

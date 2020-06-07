@@ -11,7 +11,7 @@ export const CardList = (properties: Properties) => {
         <ul class="list list--card">
             <For each={properties.cards} fallback={<li class="Card">No Cards</li>}>
                 {card => (
-                    <Card title={card.title} image={card.image} content={card.content}/>
+                    <Card {...card}/>
                 )}
             </For>
         </ul>

@@ -10,17 +10,20 @@ function App() {
     {
       title: "Aan de slag",
       image: "https://nl-design-system.gitlab.io/nl-design-system/images/img-1.png",
-      content: "Installatie, richtlijnen en layout."
+      content: "Installatie, richtlijnen en layout.",
+      href: "#aan-de-slag"
     },
     {
       title: "Basis",
       image: "https://nl-design-system.gitlab.io/nl-design-system/images/img-2.png",
-      content: "Kleuren, iconen en typografie."
+      content: "Kleuren, iconen en typografie.",
+      href: "#basis"
     },
     {
       title: "Componenten",
       image: "https://nl-design-system.gitlab.io/nl-design-system/images/img-3.png",
-      content: "Kant-en-klare onderdelen."
+      content: "Kant-en-klare onderdelen.",
+      href: "#componenten"
     }
   ];
 
@@ -28,12 +31,15 @@ function App() {
     {
       title: "Patronen",
       image: "https://nl-design-system.gitlab.io/nl-design-system/images/img-3.png",
-      content: "Validatie en forumlieropbouw."
+      content: "Validatie en forumlieropbouw.",
+      href: "#patronen"
+
     },
     {
       title: "Voorbeelden",
       image: "https://nl-design-system.gitlab.io/nl-design-system/images/img-2.png",
-      content: "Kant-en-klare pagina's."
+      content: "Kant-en-klare pagina's.",
+      href: "#voorbeelden"
     }
   ]
 
