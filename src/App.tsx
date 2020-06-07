@@ -47,7 +47,8 @@ function App() {
             <div class="col-xs-12 col-sm-11 col-md-10 col-lg-9 col-xl-8">
               <div class="content">
                 <header class="content__header">
-                  <h1 class="content__header-title">NL Design System</h1>
+                  <h1 class="content__header-title">NL Design System - implementatie in <a href="https://solidjs.com">SolidJs</a></h1>
+                  <p>broncode: <a href="https://github.com/codefornl/nl-design-system-solid/">github</a></p>
                 </header>
               </div>
             </div>
