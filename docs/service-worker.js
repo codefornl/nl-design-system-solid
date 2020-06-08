@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "https://www.codefor.nl/nl-design-system-solid/precache-manifest.c3ffc3ffa59708127ee12d8c223f42b5.js"
+  "https://www.codefor.nl/nl-design-system-solid/precache-manifest.87152950e312455b86be4707fa963a39.js"
 );
 
 self.addEventListener('message', (event) => {

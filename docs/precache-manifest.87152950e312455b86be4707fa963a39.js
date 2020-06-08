@@ -1,19 +1,19 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "c6a3c432ba553e4a4803d89bce691fe1",
+    "revision": "2a087e3feb648a0bf80766075a818bf0",
     "url": "https://www.codefor.nl/nl-design-system-solid/index.html"
   },
   {
-    "revision": "226c8a4c55f7d24ec06f",
-    "url": "https://www.codefor.nl/nl-design-system-solid/static/css/main.9453860c.chunk.css"
+    "revision": "65ed0a833bac86c01b8d",
+    "url": "https://www.codefor.nl/nl-design-system-solid/static/css/main.1bec1635.chunk.css"
   },
   {
-    "revision": "a681dd37942eb81695eb",
-    "url": "https://www.codefor.nl/nl-design-system-solid/static/js/2.f66ed24c.chunk.js"
+    "revision": "6df74504c4c854ba9724",
+    "url": "https://www.codefor.nl/nl-design-system-solid/static/js/2.7ff8b94a.chunk.js"
   },
   {
-    "revision": "226c8a4c55f7d24ec06f",
-    "url": "https://www.codefor.nl/nl-design-system-solid/static/js/main.e7bad331.chunk.js"
+    "revision": "65ed0a833bac86c01b8d",
+    "url": "https://www.codefor.nl/nl-design-system-solid/static/js/main.40a27cd7.chunk.js"
   },
   {
     "revision": "5e62bb86e38b04d5480e",
