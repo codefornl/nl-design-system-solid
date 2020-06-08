@@ -1,19 +1,39 @@
 import { Header } from './components/header/header';
 import { SkipLink } from './components/skiplink/skliplink';
-import { Footer } from './components/footer/footer';
-import { Switch, Match } from 'solid-js';
-import { Home } from './pages/Home';
-import { Components } from './pages/Components';
-import { createRouteHandler } from './Router';
-import { NotFound } from './pages/NotFound';
+import { Footer } from './components/footer/footer'
+import { Switch, Match, Show } from 'solid-js'
+import { Home } from './pages/Home'
+import { Components } from './pages/Components'
+import { createRouteHandler } from './Router'
+import { NotFound } from './pages/NotFound'
+import { Navigation } from './components/navigation/navigation'
+import { NavigationItemProperties } from './components/navigation/navigation-item'
+import { NavigationProvider, useNavigationProvider } from './Providers'
 
-function App() {
-  const matches = createRouteHandler();
-
+const NavToggler = () => {
+  const [navigationState, { hide }] = useNavigationProvider();
+  const navItems: NavigationItemProperties[] = [
+    { title: "NL Design System", href: "#home", icon: "home", onclick: hide },
+    { title: "Aan de slag", href: "#aan-de-slag" },
+    { title: "Basis", href: "#basis" },
+    { title: "Componenten", href: "#componenten" },
+    { title: "Voorbeelden", href: "#voorbeelden" }
+  ]
+  
   return (
     <>
+      <Navigation items={navItems} show={navigationState.visible} />
+    </>
+  )
+}
+
+function App() {
+  const matches = createRouteHandler()
+  return (
+    <NavigationProvider visible={false}>
       <SkipLink id="content" title="Ga direct naar inhoud" />
       <Header hide={true} transparent={true} />
+      <NavToggler />    
       <main class="skiplink-target main" id="content" tabindex="-1">
         <div class="container">
           <section class="row">
@@ -60,8 +80,8 @@ function App() {
           </ul>
         </div>
       </Footer>
-    </>
-  );
+    </NavigationProvider>
+  )
 }
 
-export default App;
+export default App

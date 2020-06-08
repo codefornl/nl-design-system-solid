@@ -32,7 +32,7 @@ ul.nav {
   padding: $nav-item-padding;
   text-decoration: none;
   text-overflow: ellipsis;
-
+  color: inherit;
   &:focus {
     text-decoration: underline;
   }

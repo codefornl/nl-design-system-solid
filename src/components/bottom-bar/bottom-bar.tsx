@@ -1,11 +1,11 @@
-import './bottom-bar.scss';
+import './bottom-bar.scss'
 
 interface Properties {
-    children: any;
+    children: any
 }
 
 export const BottomBar = (properties: Properties) => (
     <div class="bottom-bar">
-        { properties.children }
+        {properties.children}
     </div>
-);
+)

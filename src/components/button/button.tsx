@@ -1,10 +1,10 @@
-import './button.scss';
+import './button.scss'
 
 interface Properties {
-    title: string;
-    disabled?: boolean;
-    primary?: boolean;
-    onClick: () => void;
+    title: string
+    disabled?: boolean
+    primary?: boolean
+    onClick: () => void
 }
 
 export const Button = (properties: Properties) => {
@@ -16,7 +16,7 @@ export const Button = (properties: Properties) => {
         <button class={`btn${properties.primary ? " btn--primary" : ""}`}
             disabled={properties.disabled}
             onClick={click}>
-                {properties.title}
+            {properties.title}
         </button>
     )
-};
+}

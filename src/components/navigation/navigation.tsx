@@ -1,18 +1,23 @@
-import './navigation.scss';
-import {Utils} from '../../core/utils';
-import { Color } from '../../models/colors';
+import './navigation.scss'
+import { Utils } from '../../core/utils'
+import { Color } from '../../models/colors'
+import { NavigationItemProperties, NavigationItem } from './navigation-item'
+import { For, Show } from 'solid-js'
 
-const RESIZE_THROTTLE: number = 200;
+const RESIZE_THROTTLE: number = 200
 /**
  * All screens lower than this will always show a hamburger
  * @type {number}
  */
-const MOBILE_WIDTH: number = 544;
+const MOBILE_WIDTH: number = 544
+
 interface Properties {
-    title?: string;
-    screenreader?: string;
-    color?: Color;
-    block?: boolean;
+    title?: string
+    screenreader?: string
+    color?: Color
+    block?: boolean
+    show?: boolean
+    items: NavigationItemProperties[]
 }
 
 /**
@@ -113,7 +118,7 @@ export class AutoResizeNavigation {
         };
     }
 
-    private _onWindowClick():void {
+    private _onWindowClick(): void {
         this._moreNav.classList.remove('nav__item--more-open');
     }
 
@@ -298,7 +303,7 @@ export class SubMenuNavigation {
         let parentItems: NodeList = host.querySelectorAll('.nav__item--parent');
 
         for (let k: number = 0; k < parentItems.length; k++) {
-            let parentItem:HTMLElement = parentItems.item(k) as HTMLElement;
+            let parentItem: HTMLElement = parentItems.item(k) as HTMLElement;
             if (!parentItem.querySelector('a.nav__link--parent')) {
                 throw new Error('host element should have child a with class nav__link--parent');
             }
@@ -342,24 +347,19 @@ export class SubMenuNavigation {
 }
 
 export const Navigation = (properties: Properties) => (
-    <>
+    <Show when={properties.show}>
         <nav class={`top-nav${properties.color ? " top-nav--" + properties.color : ""}`}>
             <div class="container">
                 <div class={`top-nav-autoresize${properties.block ? " top-nav__block" : ""}`}>
                     <ul class="nav">
-
-                        <li class="nav__item">
-                            <a class="nav__link" href="#">Core</a></li>
-
-                        <li class="nav__item">
-                            <a class="nav__link nav__link--active" href="#">Componenten</a></li>
-
-                        <li class="nav__item">
-                            <a class="nav__link" href="#">Changelog</a></li>
-
+                        <For each={properties.items} fallback={<li class="nav__item"></li>}>
+                            {item => (
+                                <NavigationItem {...item} />
+                            )}
+                        </For>
                     </ul>
                 </div>
             </div>
         </nav>
-    </>
-);
+    </Show>
+)

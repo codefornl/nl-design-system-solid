@@ -1,9 +1,9 @@
-import './list-card.scss';
-import { CardProperties, Card } from '../card/card';
-import { For } from 'solid-js';
+import './list-card.scss'
+import { CardProperties, Card } from '../card/card'
+import { For } from 'solid-js'
 
 interface Properties {
-    cards: CardProperties[];
+    cards: CardProperties[]
 }
 
 export const CardList = (properties: Properties) => {
@@ -11,9 +11,9 @@ export const CardList = (properties: Properties) => {
         <ul class="list list--card">
             <For each={properties.cards} fallback={<li class="Card">No Cards</li>}>
                 {card => (
-                    <Card {...card}/>
+                    <Card {...card} />
                 )}
             </For>
         </ul>
     )
-};
+}

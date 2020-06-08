@@ -8,4 +8,4 @@ export const NotFound = () => (
                 description={`De pagina die je hebt aangeroepen kon niet worden gevonden`} />
         </div>
     </div>
-);
+)
