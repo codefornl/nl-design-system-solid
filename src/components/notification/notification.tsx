@@ -2,10 +2,11 @@ import './notification.scss'
 import { createState, Show } from 'solid-js';
 
 interface Properties {
-    type: 'success' | 'info' | 'warning' | 'error' //'TER INFORMATIE' | 'LET OP' | 'GELUKT' | 'STORING';
-    title: string;
-    description: string;
-    id?: string;
+    type: 'success' | 'info' | 'warning' | 'error' //'TER INFORMATIE' | 'LET OP' | 'GELUKT' | 'STORING'
+    title: string
+    description: string
+    id?: string
+    canClose?: boolean
 }
 
 /**
@@ -13,11 +14,12 @@ interface Properties {
  * Listens for click events on the close button for notification to close the notification using javascript
  */
 export const Notification = (properties: Properties) => {
-    const [state, setState] = createState({ notification: true });
+    const [state, setState] = createState({ notification: true })
 
     const handleDismiss = () => {
         setState({ notification: false })
     }
+
     let typeTitle: string
     switch (properties.type) {
         case 'success': {
@@ -52,11 +54,13 @@ export const Notification = (properties: Properties) => {
                     <h2 class="notification__title">{properties.title}</h2>
                     <span>{properties.description}</span>
                 </div>
-                <button class="notification__close-button" onclick={close}>
-                    <i class="icon icon-cross"></i>
-                Sluit
-            </button>
+                <Show when={properties.canClose}>
+                    <button class="notification__close-button" onClick={close}>
+                        <i class="icon icon-cross"></i>
+                        Sluit
+                    </button>
+                </Show>
             </div>
         </Show>
-    );
-};
+    )
+}
