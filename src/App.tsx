@@ -1,7 +1,7 @@
 import { Header } from './components/header/header';
 import { SkipLink } from './components/skiplink/skliplink';
 import { Footer } from './components/footer/footer'
-import { Switch, Match, Show } from 'solid-js'
+import { Switch, Match } from 'solid-js'
 import { Home } from './pages/Home'
 import { Components } from './pages/Components'
 import { createRouteHandler } from './Router'
@@ -9,6 +9,7 @@ import { NotFound } from './pages/NotFound'
 import { Navigation } from './components/navigation/navigation'
 import { NavigationItemProperties } from './components/navigation/navigation-item'
 import { NavigationProvider, useNavigationProvider } from './Providers'
+import { ContentHeader } from './components/header/contentheader';
 
 const NavToggler = () => {
   const [navigationState, { hide }] = useNavigationProvider();
@@ -36,16 +37,10 @@ function App() {
       <NavToggler />    
       <main class="skiplink-target main" id="content" tabindex="-1">
         <div class="container">
-          <section class="row">
-            <div class="col-xs-12 col-sm-11 col-md-10 col-lg-9 col-xl-8">
-              <div class="content">
-                <header class="content__header">
-                  <h1 class="content__header-title">NL Design System - implementatie in <a href="https://solidjs.com">SolidJs</a></h1>
-                  <p>broncode: <a href="https://github.com/codefornl/nl-design-system-solid/">github</a></p>
-                </header>
-              </div>
-            </div>
-          </section>
+          <ContentHeader>
+              <h1 class="content__header-title">NL Design System - implementatie in <a href="https://solidjs.com">SolidJs</a></h1>
+              <p>broncode: <a href="https://github.com/codefornl/nl-design-system-solid/">github</a></p>
+          </ContentHeader>
           <article>
             <Switch fallback={<NotFound />}>
               <Match when={matches("home")}>

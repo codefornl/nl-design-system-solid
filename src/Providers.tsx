@@ -1,28 +1,39 @@
 import { createState, createContext, useContext, Component } from "solid-js"
-import { SlideToggle } from "./core/animations/SlideToggle";
+import { createRouteHandler } from "./Router";
 
+const matches = createRouteHandler()
+
+/**
+ * Type definition for NavigationStore Object
+ */
 type NavigationStore = [
   { visible: boolean },
   { show?: () => void; hide?: () => void; toggle?: () => void }
 ];
 
-const NavigationContext = createContext<NavigationStore>([{ visible: false }, {}]);
+/**
+ * NavigationContext. Since we want to hide the navigation on the Home page, the
+ * App needs to be wrapped in this one
+ */
+const NavigationContext = createContext<NavigationStore>([{ visible: !matches("home") }, {}]);
 
+/**
+ * Provider to Handle the navigation state, show, hide and toggle
+ * 
+ * @param props 
+ */
 export const NavigationProvider: Component<{ visible: boolean }> = props => {
-  const [state, setState] = createState({ visible: props.visible || false }),
+  const [state, setState] = createState({ visible: props.visible || !matches("home") }),
     store: NavigationStore = [
       state,
       {
         show() {
-          console.log("Show")
           setState("visible", c => true);
         },
         hide() {
-          console.log("Hide")
           setState("visible", c => false);
         },
         toggle() {
-          console.log("Toggle")
           setState("visible", c => !c);
         }
       }
@@ -35,6 +46,9 @@ export const NavigationProvider: Component<{ visible: boolean }> = props => {
   );
 };
 
+/**
+ * Implementation of the navigation context
+ */
 export function useNavigationProvider() {
   return useContext(NavigationContext);
 }

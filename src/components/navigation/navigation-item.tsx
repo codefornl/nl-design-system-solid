@@ -3,10 +3,10 @@ import { Show } from "solid-js"
 
 export interface NavigationItemProperties {
     title: string
-    href: string
+    href?: string
     active?: boolean
     icon?: string
-    onclick?: () => void
+    onclick?: any
 }
 
 export const NavigationItem = (properties: NavigationItemProperties) => (
